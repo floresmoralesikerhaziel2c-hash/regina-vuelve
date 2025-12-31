@@ -1,0 +1,102 @@
+/* ===== ESTILO AMOR 💖 ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --rosa: #ff6f91;
+  --rosa-claro: #ffd6e0;
+  --rojo: #ff4d6d;
+  --vino: #c9184a;
+  --blanco: #fff;
+  --sombra: 0 10px 30px rgba(255, 77, 109, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffd6e0, #ffb3c6, #ff8fab);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contenedor principal */
+.card-love {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  padding: 40px;
+  width: 360px;
+  text-align: center;
+  box-shadow: var(--sombra);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Corazoncito animado */
+.card-love::before {
+  content: "❤";
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  font-size: 80px;
+  color: var(--rosa);
+  opacity: 0.15;
+  animation: float 6s infinite ease-in-out;
+}
+
+/* Título */
+.card-love h1 {
+  color: var(--vino);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Texto */
+.card-love p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+/* Botón */
+.btn-love {
+  background: linear-gradient(135deg, var(--rosa), var(--rojo));
+  color: var(--blanco);
+  border: none;
+  border-radius: 999px;
+  padding: 12px 26px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 77, 109, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-love:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 14px 30px rgba(255, 77, 109, 0.6);
+}
+
+/* Input */
+.input-love {
+  width: 100%;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid var(--rosa-claro);
+  margin-bottom: 15px;
+  outline: none;
+}
+
+.input-love:focus {
+  border-color: var(--rojo);
+  box-shadow: 0 0 0 3px rgba(255, 77, 109, 0.25);
+}
+
+/* Animación */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(15px); }
+}
