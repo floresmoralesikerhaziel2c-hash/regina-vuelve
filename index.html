@@ -1,15 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
-<link rel="stylesheet" href="style.css">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>index.html</title>
+
+  <!-- IMPORTANTE PARA CELULAR -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ffb3c6, #ff8fab, #ff4d6d);
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .card {
+      position: relative;
+      width: 100%;
+      max-width: 380px;
+      padding: 90px 25px 35px;
+      background: rgba(255, 255, 255, 0.97);
+      border-radius: 26px;
+      box-shadow: 0 14px 30px rgba(255, 77, 109, 0.35);
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .card h1 {
+      position: absolute;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+      color: #c9184a;
+      font-size: 1.5rem;
+      width: 100%;
+    }
+
+    .card::before {
+      content: "❤";
+      position: absolute;
+      bottom: -25px;
+      right: -10px;
+      font-size: 200px;
+      color: #ff4d6d;
+      opacity: 0.15;
+      pointer-events: none;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 25px;
+    }
+
+    button {
+      width: 100%;
+      max-width: 260px;
+      background: linear-gradient(135deg, #ff6f91, #ff4d6d);
+      color: white;
+      border: none;
+      border-radius: 999px;
+      padding: 14px;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(255, 77, 109, 0.45);
+    }
+
+    button:active {
+      transform: scale(0.97);
+    }
+  </style>
 </head>
+
 <body>
-    <h1>REGINA CHINGA TU MADRE</h1>
-    <footer>Regina vuelve, te extraño</footer>    
-<img src="checo.jpg">
+
+  <div class="card">
+    <h1>Chinga tu madre </h1>
+
+    <p>Regina chinga tu madre 
+    </p>
+
+    <button onclick="playMusic()">Dale clic we</button>
+  </div>
+
+  <audio id="musica" loop>
+    <source src="rata-de-dos-patas-letra.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function playMusic() {
+      document.getElementById("musica").play();
+    }
+  </script>
+
 </body>
 </html>
-
